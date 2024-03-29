@@ -23,23 +23,31 @@ public class Person {
         return type;
     }
 
-    public int account(Person person) {
-        int cost = 0;
-        if (person.age < 0)
-            return -1;
-        else {
-            if (person.age <= 5) {
-                if (person.type == "NORMAL")
-                    cost = 100000;
-                else
-                    cost = 200000;
-            } else {
-                if (person.type == "VIP")
-                    cost = 1000000;
-                else
-                    cost = 500000;
-            }
+    public String isRent(Person person) {
+        if (person.type.equals("Junior")) {
+            if (person.age < 1)
+                return "Dau vao khong hop le";
+            else if (person.age <= 18)
+                return "Khong thue";
+            else if (person.age <= 22)
+                return "Thue ban thoi gian";
+            else if (person.age <= 50)
+                return "Thue toan thoi gian";
+            else
+                return "Khong thue";
         }
-        return cost;
+        else if (person.type.equals("Senior")) {
+            if (person.age < 1)
+                return "Dau vao khong hop le";
+            else if (person.age <= 18)
+                return "Khong thue";
+            else if (person.age <= 22)
+                return "Thue toan thoi gian";
+            else if (person.age <= 50)
+                return "Thue toan thoi gian";
+            else
+                return "Khong thue";
+        }
+        return "Dau vao khong hop le";
     }
 }
