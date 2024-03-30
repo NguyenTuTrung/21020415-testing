@@ -1,10 +1,10 @@
 public class Person {
     private int age;
-    private String type;
+    private String pos;
 
-    public Person(int age, String type) {
+    public Person(int age, String pos) {
         this.age = age;
-        this.type = type;
+        this.pos = pos;
     }
 
     public void setAge(int age) {
@@ -12,7 +12,7 @@ public class Person {
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.pos = pos;
     }
 
     public int getAge() {
@@ -20,11 +20,11 @@ public class Person {
     }
 
     public String getType() {
-        return type;
+        return pos;
     }
 
-    public String isRent(Person person) {
-        if (person.type.equals("Junior")) {
+    public String decide(Person person) {
+        if (person.pos.equals("Junior")) {
             if (person.age < 1)
                 return "Dau vao khong hop le";
             else if (person.age <= 18)
@@ -36,7 +36,7 @@ public class Person {
             else
                 return "Khong thue";
         }
-        else if (person.type.equals("Senior")) {
+        else if (person.pos.equals("Senior")) {
             if (person.age < 1)
                 return "Dau vao khong hop le";
             else if (person.age <= 18)
