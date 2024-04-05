@@ -68,7 +68,7 @@ class BlackBox {
         assertEquals("Khong thue", p.decide(p));
     }
 
-    // Chuoi khac
+    ////// Chuoi khac
     @Test
     void testCase13() {
         Person p = new Person(0, "abc");
