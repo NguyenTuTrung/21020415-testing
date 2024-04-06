@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BlackBox {
 
-    // Junior
+    /////// Junior
     @Test
     void testCase1() {
         Person p = new Person(0, "Junior");
